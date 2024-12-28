@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6x5 Table and Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        table, th, td {
+            border: 1px solid #000;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+        form {
+            max-width: 400px;
+            margin: auto;
+        }
+        form div {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input, textarea, button {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+        }
+        button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>6x5 Table and Form</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Players --></th>
+                <th>Lenke</th>
+                <th>Gaspar</th>
+                <th>Zsofi</th>
+                <th>Geza</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Trees</td>
+                <td>Row 1, Col 2</td>
+                <td>Row 1, Col 3</td>
+                <td>Row 1, Col 4</td>
+                <td>Row 1, Col 5</td>
+            </tr>
+            <tr>
+                <td>Top-Bottom</td>
+                <td>Row 2, Col 2</td>
+                <td>Row 2, Col 3</td>
+                <td>Row 2, Col 4</td>
+                <td>Row 2, Col 5</td>
+            </tr>
+            <tr>
+                <td>Left-Right</td>
+                <td>Row 3, Col 2</td>
+                <td>Row 3, Col 3</td>
+                <td>Row 3, Col 4</td>
+                <td>Row 3, Col 5</td>
+            </tr>
+            <tr>
+                <td>In Cave</td>
+                <td>Row 4, Col 2</td>
+                <td>Row 4, Col 3</td>
+                <td>Row 4, Col 4</td>
+                <td>Row 4, Col 5</td>
+            </tr>
+            <tr>
+                <td>Summarum</td>
+                <td>Row 5, Col 2</td>
+                <td>Row 5, Col 3</td>
+                <td>Row 5, Col 4</td>
+                <td>Row 5, Col 5</td>
+            </tr>
+            <tr>
+                <td>Winer</td>
+                <td>Row 6, Col 2</td>
+                <td>Row 6, Col 3</td>
+                <td>Row 6, Col 4</td>
+                <td>Row 6, Col 5</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <form action="/submit" method="post">
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+        </div>
+        <div>
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+
+</body>
+</html>
