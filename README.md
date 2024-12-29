@@ -1,6 +1,6 @@
 # Forest Shuffle
 
-**Forest Shuffle** is a web-based application that allows players to keep track of various statistics in a forest-themed game. The application features a simple user interface where users can input numbers for each player and see the calculated sums.
+**Forest Shuffle** is a web-based application that allows players to keep track of various statistics in a Forest Shuffle Board Game. The application features a simple user interface where users can input numbers for each player and see the calculated sums.
 
 ## Features
 
