@@ -66,10 +66,10 @@
         <thead>
             <tr>
                 <th>Players --></th>
-                <th>Lenke</th>
-                <th>Gaspar</th>
-                <th>Zsofi</th>
-                <th>Geza</th>
+                <th><input type="text" id="name1" name="name1" required ></th>
+                <th><input type="text" id="name2" name="name2" required ></th>
+                <th><input type="text" id="name3" name="name3" required ></th>
+                <th><input type="text" id="name4" name="name4" required ></th>
             </tr>
         </thead>
         <tbody>
@@ -112,34 +112,43 @@
         </tbody>
     </table>
 
-    
-    <script>
-        //Lenke
-        
+    <h1 id="hnumber">The winnwer is: </h1>
 
-        //Lenke
+    <script>
+        let hn=0;
+        
+        
+        
         function calculateSummary() {
+            // Input players
+            const name1 = document.getElementById("name1").value;
+            const name2 = document.getElementById("name2").value;
+            const name3 = document.getElementById("name3").value;
+            const name4 = document.getElementById("name4").value;
+
+
+            //Lenke -Player1
             const lenke1 = parseFloat(document.getElementById('lenke1')?.value) || 0;
             const lenke2 = parseFloat(document.getElementById('lenke2')?.value) || 0;
             const lenke3 = parseFloat(document.getElementById('lenke3')?.value) || 0;
             const lenke4 = parseFloat(document.getElementById('lenke4')?.value) || 0;
 
             const sumL = lenke1 + lenke2 + lenke3 + lenke4;
-
+            // -Player2
             const gaspar1 = parseFloat(document.getElementById('gaspar1')?.value) || 0;
             const gaspar2 = parseFloat(document.getElementById('gaspar2')?.value) || 0;
             const gaspar3 = parseFloat(document.getElementById('gaspar3')?.value) || 0;
             const gaspar4 = parseFloat(document.getElementById('gaspar4')?.value) || 0;
 
             const sumG = gaspar1 + gaspar2 + gaspar3 + gaspar4;
-
+            // -Player3
             const zsofi1 = parseFloat(document.getElementById('zsofi1')?.value) || 0;
             const zsofi2 = parseFloat(document.getElementById('zsofi2')?.value) || 0;
             const zsofi3 = parseFloat(document.getElementById('zsofi3')?.value) || 0;
             const zsofi4 = parseFloat(document.getElementById('zsofi4')?.value) || 0;
 
             const sumZ = zsofi1 + zsofi2 + zsofi3 + zsofi4;
-
+            // -Player4
             const geza1 = parseFloat(document.getElementById('geza1')?.value) || 0;
             const geza2 = parseFloat(document.getElementById('geza2')?.value) || 0;
             const geza3 = parseFloat(document.getElementById('geza3')?.value) || 0;
@@ -152,6 +161,24 @@
             document.getElementById('ZsofiS').textContent = sumZ;
             document.getElementById('GezaS').textContent = sumGe;
 
+            hn = Math.max(sumL, sumG, sumZ, sumGe);
+            if (hn == sumL) {
+
+                document.getElementById('hnumber').textContent = "The winner is: " + name1;
+            }
+            if (hn == sumG) {
+
+                document.getElementById('hnumber').textContent ="The winner is: " +  name2;
+            }
+            if (hn == sumZ) {
+
+                document.getElementById('hnumber').textContent ="The winner is: " +  name3;
+                }
+            if (hn == sumGe) {
+
+                document.getElementById('hnumber').textContent ="The winner is: " +  name4;
+                }
+            
 
             
         }
