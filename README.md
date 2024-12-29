@@ -4,7 +4,7 @@
 
 ## Features
 
-- **Player Tracking:** Keep track of the statistics for multiple players (Lenke, Gaspar, Zsofi, and Geza).
+- **Player Tracking:** Keep track of the statistics for multiple players.
 - **Dynamic Updates:** Automatically calculate and display the sum of the inputs for each player.
 - **Responsive Design:** The application is designed to be responsive and works well on different screen sizes.
 
