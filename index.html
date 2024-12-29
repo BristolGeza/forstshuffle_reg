@@ -112,9 +112,9 @@
         </tbody>
     </table>
 
-    
+    <h1 id="hnumber">The winnwer is: </h1>
     <script>
-        //Lenke
+        let hn=0;
         
 
         //Lenke
@@ -152,6 +152,24 @@
             document.getElementById('ZsofiS').textContent = sumZ;
             document.getElementById('GezaS').textContent = sumGe;
 
+            hn = Math.max(sumL, sumG, sumZ, sumGe);
+            if (hn == sumL) {
+
+                document.getElementById('hnumber').textContent = "The winnwer is Lenke";
+            }
+            if (hn == sumG) {
+
+                document.getElementById('hnumber').textContent = "The winnwer is Gaspar";
+            }
+            if (hn == sumZ) {
+
+                document.getElementById('hnumber').textContent = "The winnwer is Zsofi";
+                }
+            if (hn == sumGe) {
+
+                document.getElementById('hnumber').textContent = "The winnwer is Geza";
+                }
+            
 
             
         }
