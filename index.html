@@ -54,7 +54,8 @@
         }
         h1 {
             text-align: center;
-            color: #FFF;
+            color: #fff;
+            text-decoration-color: aqua;
         }
     </style>
 </head>
@@ -123,51 +124,45 @@
             const lenke3 = parseFloat(document.getElementById('lenke3')?.value) || 0;
             const lenke4 = parseFloat(document.getElementById('lenke4')?.value) || 0;
 
-            const sum = lenke1 + lenke2 + lenke3 + lenke4;
-            
-            document.getElementById('LenkeS').textContent = sum;
-        }
+            const sumL = lenke1 + lenke2 + lenke3 + lenke4;
 
-        document.addEventListener('input', calculateSummary);
-
-        //Gaspar
-        function calculateSummaryG() {
             const gaspar1 = parseFloat(document.getElementById('gaspar1')?.value) || 0;
             const gaspar2 = parseFloat(document.getElementById('gaspar2')?.value) || 0;
             const gaspar3 = parseFloat(document.getElementById('gaspar3')?.value) || 0;
             const gaspar4 = parseFloat(document.getElementById('gaspar4')?.value) || 0;
 
-            const sum = gaspar1 + gaspar2 + gaspar3 + gaspar4;
-            document.getElementById('GasparS').textContent = sum;
-        }
+            const sumG = gaspar1 + gaspar2 + gaspar3 + gaspar4;
 
-        document.addEventListener('input', calculateSummaryG);
-
-        //zsofi
-        function calculateSummaryZ() {
             const zsofi1 = parseFloat(document.getElementById('zsofi1')?.value) || 0;
             const zsofi2 = parseFloat(document.getElementById('zsofi2')?.value) || 0;
             const zsofi3 = parseFloat(document.getElementById('zsofi3')?.value) || 0;
             const zsofi4 = parseFloat(document.getElementById('zsofi4')?.value) || 0;
 
-            const sum = zsofi1 + zsofi2 + zsofi3 + zsofi4;
-            document.getElementById('ZsofiS').textContent = sum;
-        }
+            const sumZ = zsofi1 + zsofi2 + zsofi3 + zsofi4;
 
-        document.addEventListener('input', calculateSummaryZ);
-
-        //geza
-        function calculateSummaryGe() {
             const geza1 = parseFloat(document.getElementById('geza1')?.value) || 0;
             const geza2 = parseFloat(document.getElementById('geza2')?.value) || 0;
             const geza3 = parseFloat(document.getElementById('geza3')?.value) || 0;
             const geza4 = parseFloat(document.getElementById('geza4')?.value) || 0;
 
-            const sum = geza1 + geza2 + geza3 + geza4;
-            document.getElementById('GezaS').textContent = sum;
+            const sumGe = geza1 + geza2 + geza3 + geza4;
+
+            document.getElementById('LenkeS').textContent = sumL;
+            document.getElementById('GasparS').textContent = sumG;
+            document.getElementById('ZsofiS').textContent = sumZ;
+            document.getElementById('GezaS').textContent = sumGe;
+
+
+            
         }
 
-        document.addEventListener('input', calculateSummaryGe);
+        document.addEventListener('input', calculateSummary);
+
+       
+
+       
+
+        
     </script>
 </body>
 </html>
