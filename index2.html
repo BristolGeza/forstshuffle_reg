@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forest shuffle</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+            background-image: url(assets/images/images.jpeg);
+            background-size: cover;
+            color: #fff;
+            
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            
+        }
+        table, th, td {
+            border: 1px solid #fff;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+        form {
+            max-width: 400px;
+            margin: auto;
+        }
+        form div {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input, textarea, button {
+            width: 50%;
+            padding: 10px;
+            font-size: 16px;
+        }
+        button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        h1 {
+            text-align: center;
+            color: #fff;
+            text-decoration-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <h1>Forest Shuffle</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Players --></th>
+                <th>Lenke</th>
+                <th>Gaspar</th>
+                <th>Zsofi</th>
+                <th>Geza</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Trees</td>
+                <td><input type="number" id="lenke1" name="lenke1" required ></td>
+                <td><input type="number" id="gaspar1" name="gaspar1" required></td>
+                <td><input type="number" id="zsofi1" name="zsofi1" required></td>
+                <td><input type="number" id="geza1" name="geza1" required></td>
+            </tr>
+            <tr>
+                <td>Top-Bottom</td>
+                <td><input type="number" id="lenke2" name="lenke2" required ></td>
+                <td><input type="number" id="gaspar2" name="gaspar2" required></td>
+                <td><input type="number" id="zsofi2" name="zsofi2" required></td>
+                <td><input type="number" id="geza2" name="geza2" required></td>
+            </tr>
+            <tr>
+                <td>Left-Right</td>
+                <td><input type="number" id="lenke3" name="lenke3" required ></td>
+                <td><input type="number" id="gaspar3" name="gaspar3" required></td>
+                <td><input type="number" id="zsofi3" name="zsofi3" required></td>
+                <td><input type="number" id="geza3" name="geza3" required></td>
+            </tr>
+            <tr>
+                <td>In Cave</td>
+                <td><input type="number" id="lenke4" name="lenke4" required ></td>
+                <td><input type="number" id="gaspar4" name="gaspar4" required></td>
+                <td><input type="number" id="zsofi4" name="zsofi4" required></td>
+                <td><input type="number" id="geza4" name="geza4" required></td>
+            </tr>
+            <tr>
+                <td>Sum</td>
+                <td id="LenkeS">0</td>
+                <td id="GasparS">0</td>
+                <td id="ZsofiS">0</td>
+                <td id="GezaS">0</td>
+            </tr>
+            
+        </tbody>
+    </table>
+
+    
+    <script>
+        //Lenke
+        
+
+        //Lenke
+        function calculateSummary() {
+            const lenke1 = parseFloat(document.getElementById('lenke1')?.value) || 0;
+            const lenke2 = parseFloat(document.getElementById('lenke2')?.value) || 0;
+            const lenke3 = parseFloat(document.getElementById('lenke3')?.value) || 0;
+            const lenke4 = parseFloat(document.getElementById('lenke4')?.value) || 0;
+
+            const sumL = lenke1 + lenke2 + lenke3 + lenke4;
+
+            const gaspar1 = parseFloat(document.getElementById('gaspar1')?.value) || 0;
+            const gaspar2 = parseFloat(document.getElementById('gaspar2')?.value) || 0;
+            const gaspar3 = parseFloat(document.getElementById('gaspar3')?.value) || 0;
+            const gaspar4 = parseFloat(document.getElementById('gaspar4')?.value) || 0;
+
+            const sumG = gaspar1 + gaspar2 + gaspar3 + gaspar4;
+
+            const zsofi1 = parseFloat(document.getElementById('zsofi1')?.value) || 0;
+            const zsofi2 = parseFloat(document.getElementById('zsofi2')?.value) || 0;
+            const zsofi3 = parseFloat(document.getElementById('zsofi3')?.value) || 0;
+            const zsofi4 = parseFloat(document.getElementById('zsofi4')?.value) || 0;
+
+            const sumZ = zsofi1 + zsofi2 + zsofi3 + zsofi4;
+
+            const geza1 = parseFloat(document.getElementById('geza1')?.value) || 0;
+            const geza2 = parseFloat(document.getElementById('geza2')?.value) || 0;
+            const geza3 = parseFloat(document.getElementById('geza3')?.value) || 0;
+            const geza4 = parseFloat(document.getElementById('geza4')?.value) || 0;
+
+            const sumGe = geza1 + geza2 + geza3 + geza4;
+
+            document.getElementById('LenkeS').textContent = sumL;
+            document.getElementById('GasparS').textContent = sumG;
+            document.getElementById('ZsofiS').textContent = sumZ;
+            document.getElementById('GezaS').textContent = sumGe;
+
+
+            
+        }
+
+        document.addEventListener('input', calculateSummary);
+
+       
+
+       
+
+        
+    </script>
+</body>
+</html>
